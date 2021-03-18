@@ -1,2 +1,2 @@
 # toy-chord
-Distributed Peer-to-Peer system created with Flask web framework and based on Chord protocol
+Distributed Peer-to-Peer system, based on Chord protocol, created with Flask web framework
