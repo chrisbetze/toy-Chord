@@ -6,14 +6,14 @@ key onto a node. Data location can be easily implemented on top of Chord by asso
 
 ## Description
 In this work, we designed ToyChord, a simplified version of Chord [1]. The application was developed in **Python** using the **Flask** framework with **HTTP requests**, for support calls within the machine network. Ιτ was tested with 10 different nodes, which "run" on 5 virtual machines provided to us by the *Okeanos service*. The basic functionalities that we implemented are:
-* The division of the Ids space (nodes and objects)
+* The division of the IDs space (nodes and objects)
 * Routing
 * Node arrival
 * Node departure (graceful)
 * Data replication
 
 ## Consistent Hashing
-The consistent hash function assigns each node and key an 160-bit identifier using the hash function SHA-1. A node’s identifier is chosen by hashing the node’s IP address (with port), while a key identifier is produced by hashing the key.
+The consistent hash function assigns each node and key an 160-bit identifier using the hash function **SHA-1**. A node’s identifier is chosen by hashing the node’s IP address (with port), while a key identifier is produced by hashing the key.
 
 ## Node Application
 Each node implements the insert (key, value), query (key) and delete (key) functions for <key, value> pairs where both the key and the value are stings. The system handles node arrivals (join (nodeID)) and node departures (depart (nodeID)). In this case, the affected nodes update the pointers to the previous and next node that is necessary to route messages and redistribute their keys, so each node is responsible for the correct keys.
@@ -40,7 +40,7 @@ A write always starts from the primary node that is responsible for a key and pr
 The changes are spread lazily in the replicas. So, a write request goes to the primary node that is responsible for the specific key and this node returns the result of write. It then sends the new value to the next *k-1* nodes. A read is returned from any node has a copy of the key it requests (at the risk of returning a stale value).
 
 ## Εxperiments - Results
-The ultimate goal of the development of the above application was to perform a series of experiments, that will lead to a better understanding of concepts of distributed systems, such as replication with linearizability and eventual consistency. Specifically, we performed experiments for these two types of replication in case the replication factor (*k*) is 1, 3 and 5. That is, a total of 6 experiments.
+The ultimate goal of the development of the above application was to perform a series of experiments, that will lead to a better understanding of concepts of distributed systems, such as replication with linearizability and eventual consistency. Specifically, we performed experiments for these two types of replication in case the replication factor (*k*) is 1, 3 and 5. That is, a total of 6 experiments to study the read and write throughput of the system. The results along with some diagrams are presented in the [report](https://github.com/chrisbetze/toy-chord/blob/ddb0a1cd14969f14a63a46af702b445e87bfaf5e/report.pdf).
 
 ## References
 [1] Stoica, Ion, et al. "Chord: A scalable peer-to-peer lookup service for internet applications." ACM
