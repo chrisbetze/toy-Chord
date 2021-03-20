@@ -5,8 +5,7 @@ node is equivalent in functionality. Chord is a distributed lookup protocol that
 key onto a node. Data location can be easily implemented on top of Chord by associating a key with each data item, and storing the key/data item pair at the node to which the key maps. Chord adapts efficiently as nodes join and leave the system, and can answer queries even if the system is continuously changing.
 
 ## Description
-In this work, we designed ToyChord, a simplified version of Chord [1]. The application was developed in Python using the Flask framework with HTTP requests, for support
-calls within the machine network. Ιτ was tested with 10 different nodes, which "run" on 5 virtual machines provided to us by the *Okeanos service*. The basic functionalities that we implemented are:
+In this work, we designed ToyChord, a simplified version of Chord [1]. The application was developed in **Python** using the **Flask** framework with **HTTP requests**, for support calls within the machine network. Ιτ was tested with 10 different nodes, which "run" on 5 virtual machines provided to us by the *Okeanos service*. The basic functionalities that we implemented are:
 * The division of the Ids space (nodes and objects)
 * Routing
 * Node arrival
