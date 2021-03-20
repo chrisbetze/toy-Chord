@@ -1,6 +1,6 @@
-### Αρχεία
-* userXY.py: Κώδικας για τον χρήστη Y στον κόμβο X.
-* cli.py: CLI για την εκτέλεση εντολών. Οδηγίες χρήσης μέσω εντολής help.
-* exp_cli.py: CLI για την εκτέλεση πειραμάτων (μειωμένη αλληλεπίδραση με τον χρήστη).
-* run_experiment.py: Πρόγραμμα που τρέχει το experiment που δίνεται ως όρισμα (insert, query, requests). Πρέπει τα txt να βρίσκονται στον ίδιο φάκελο.
-* join.py: Πρόγραμμα για να εκτελεί τα joins των κόμβων.
+### Files
+* userXY.py: Code for user Y in node X.
+* cli.py: CLI for executing commands. Instructions for use via the *help* command.
+* exp_cli.py: CLI for executing experiments (reduced user interaction).
+* run_experiment.py: Program that runs the experiment given as an argument (insert, query, requests). The .txt files must be in the same folder.
+* join.py: Program that executes the joins of the nodes.
