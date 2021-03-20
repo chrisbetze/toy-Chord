@@ -1,4 +1,4 @@
-# toy-chord
+# Τoy-Chord
 ## About Chord [1]
 Peer-to-peer systems and applications are distributed systems without any centralized control or hierarchical organization, where the software running at each
 node is equivalent in functionality. Chord is a distributed lookup protocol that provides support for just one operation: given a key, it maps the
