@@ -21,7 +21,7 @@ Each node implements the insert (key, value), query (key) and delete (key) funct
 ## Client Application
 We implemented a client (cli) which allows the user to perform the following:
 ```
-insert <key, value> : A (key, value) pair is inserted or updated.
+insert < key, value > : A (key, value) pair is inserted or updated.
 delete < key > : A (key, value) pair is deleted.
 query < key > : The key is searched and the corresponding value is returned.
 query * : All (key, value) pairs stored in DHT per node are returned.
