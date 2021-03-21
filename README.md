@@ -25,10 +25,10 @@ insert < key, value > : A (key, value) pair is inserted or updated.
 delete < key > : A (key, value) pair is deleted.
 query < key > : The key is searched and the corresponding value is returned.
 query * : All (key, value) pairs stored in DHT per node are returned.
-join : A new node joined the Chord.
-depart : A node gracefully departed.
-overlay : Print the network topology.
-help : Explanation of the above commands.
+join : A new node joins the Chord.
+depart : A node gracefully departs.
+overlay : Prints the network topology.
+help : Explanation of the commands.
 ```
 ## Replication - Consistency
 The system stores replicas of the data associated with a key, at the *k* nodes succeeding the key. The variable *k* is called **replication factor**. We implemented 2 types of consistency for replicas.
