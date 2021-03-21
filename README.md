@@ -31,7 +31,7 @@ overlay : Prints the network topology.
 help : Explanation of the commands.
 ```
 ## Replication - Consistency
-The system stores replicas of the data associated with a key, at the *k* nodes succeeding the key. The variable *k* is called **replication factor**. We implemented 2 types of consistency for replicas.
+The system stores replicas of the data associated with a key, at the *k* nodes succeeding the primary node. The variable *k* is called **replication factor**. We implemented 2 types of consistency for replicas.
 
 ### Linearizability - Chain replication
 A write always starts from the primary node that is responsible for a key and proceeds to the *k-1* successors they have replicas. The last node in the chain returns the write result. A read instead, returns the value from the last node in the chain.
