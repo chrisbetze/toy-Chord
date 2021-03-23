@@ -40,8 +40,13 @@ A write always starts from the primary node that is responsible for a key and pr
 The changes are spread lazily in the replicas. So, a write request goes to the primary node that is responsible for the specific key and this node returns the result of write. It then sends the new value to the next *k-1* nodes. A read is returned from any node has a copy of the key it requests (at the risk of returning a stale value).
 
 ## Εxperiments - Results
-The ultimate goal of the development of the above application was to perform a series of experiments, that will lead to a better understanding of concepts of distributed systems, such as replication with linearizability and eventual consistency. Specifically, we performed experiments for these two types of replication in case the replication factor (*k*) is 1, 3 and 5. That is, a total of 6 experiments to study the read and write throughput of the system. The results along with some diagrams are presented in the [report](https://github.com/chrisbetze/toy-chord/blob/ddb0a1cd14969f14a63a46af702b445e87bfaf5e/report.pdf).
+The ultimate goal of the development of the above application was to perform a series of experiments, that will lead to a better understanding of concepts of distributed systems, such as replication with linearizability and eventual consistency. Specifically, we performed experiments for these two types of replication in case the replication factor (*k*) is 1, 3 and 5. That is, a total of 6 experiments to study the read and write throughput of the system. 
+![Capture](https://user-images.githubusercontent.com/50949470/112135660-b15f3100-8bd6-11eb-8f05-ab6c4a69225f.PNG)
 
-## References
+Finally, we performed a series of inserts, updates and queries in the DHT with 10 nodes and *k = 3* for both replication cases. The purpose of this experiment was to find out which kind of replication gives the freshest (last written) values. Τhe results showed that, for eventual consistency we have some stale values, while in linerizability all results contain the last written value.
+
+*The results and the diagrams are also presented in the [report](https://github.com/chrisbetze/toy-chord/blob/ddb0a1cd14969f14a63a46af702b445e87bfaf5e/report.pdf).*
+
+## Reference
 [1] Stoica, Ion, et al. "Chord: A scalable peer-to-peer lookup service for internet applications." ACM
 SIGCOMM Computer Communication Review 31.4 (2001): 149-160.
