@@ -45,8 +45,11 @@ The ultimate goal of the development of the above application was to perform a s
 
 Finally, we performed a series of inserts, updates and queries in the DHT with 10 nodes and *k = 3* for both replication cases. The purpose of this experiment was to find out which kind of replication gives the freshest (last written) values. Τhe results showed that, for eventual consistency we have some stale values, while in linerizability all results contain the last written value.
 
-*The results and the diagrams are also presented in the [report](https://github.com/chrisbetze/toy-chord/blob/ddb0a1cd14969f14a63a46af702b445e87bfaf5e/report.pdf).*
+The results and the diagrams are also presented in the [report](https://github.com/chrisbetze/toy-chord/blob/ddb0a1cd14969f14a63a46af702b445e87bfaf5e/report.pdf).
 
 ## Reference
 [1] Stoica, Ion, et al. "Chord: A scalable peer-to-peer lookup service for internet applications." ACM
 SIGCOMM Computer Communication Review 31.4 (2001): 149-160.
+
+##
+*Collaborators: [Manos (Emmanouil) Vekrakis](https://github.com/manosvek), [Dimitris Kranias](https://github.com/dimitriskranias)*
